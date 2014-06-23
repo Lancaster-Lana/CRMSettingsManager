@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<queries>
+  <query name ="GetERPCommunicationComponentServices">
+    SELECT
+    Service.ERPCommunicationComponent_ID,
+    Service.ServiceType,
+    EndPoint.ListenHost, EndPoint.ListenPort, EndPoint.AnswerHost, EndPoint.AnswerPort
+    FROM
+    Service FULL JOIN  Service_To_EndPoint
+    ON  Service.ID =Service_To_EndPoint.Service_ID
+    INNER JOIN EndPoint
+    ON  EndPoint.ID = Service_To_EndPoint.EndPoint_ID
+    WHERE     (Service.ERPCommunicationComponent_ID = @ERPCommunicationComponent_ID)
+  </query>
+</queries>

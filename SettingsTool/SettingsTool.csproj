@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0CB386CD-C165-42CF-9D0A-8200079D1473}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LanaSoft.SettingsTool</RootNamespace>
+    <AssemblyName>LanaSoft.SettingsTool</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>http://localhost/Celenia.Ocean.SettingsTool/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\BIN\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Application Logic\SettingsToolException.cs" />
+    <Compile Include="Framework\UserControls\MultiPanel\Editors.cs" />
+    <Compile Include="Framework\UserControls\MultiPanel\InfoItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Framework\UserControls\MultiPanel\InfoItem.designer.cs">
+      <DependentUpon>InfoItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Framework\UserControls\MultiPanel\Properties\Resources.Designer.cs" />
+    <Compile Include="Framework\UserControls\MultiPanel\SubItemsPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Framework\UserControls\MultiPanel\SubItemsPanel.Designer.cs">
+      <DependentUpon>SubItemsPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presenter %28GUI%29\Additional Dialogs\RemoveEndPointFromECCServiceDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presenter %28GUI%29\Additional Dialogs\RemoveEndPointFromECCServiceDialog.Designer.cs">
+      <DependentUpon>RemoveEndPointFromECCServiceDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presenter %28GUI%29\DetailedControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presenter %28GUI%29\DetailedControl.Designer.cs">
+      <DependentUpon>DetailedControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application Logic\ISettingsData.cs" />
+    <Compile Include="Presenter %28GUI%29\Additional Dialogs\EditECCServiceDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presenter %28GUI%29\Additional Dialogs\EditECCServiceDialog.Designer.cs">
+      <DependentUpon>EditECCServiceDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presenter %28GUI%29\EditECCServiceDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presenter %28GUI%29\EditECCServiceDialog.Designer.cs">
+      <DependentUpon>EditECCServiceDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presenter %28GUI%29\Settings Types\ServiceType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presenter %28GUI%29\Settings Types\ServiceType.Designer.cs">
+      <DependentUpon>ServiceType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presenter %28GUI%29\DetailedControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DetailedControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presenter %28GUI%29\EditECCServiceDialog.resx">
+      <DependentUpon>EditECCServiceDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presenter %28GUI%29\Settings Types\CRMCommunicator.resx">
+      <DependentUpon>CRMCommunicator.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presenter %28GUI%29\Settings Types\ERPCommunicationComponent.resx">
+      <DependentUpon>ERPCommunicationComponent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presenter %28GUI%29\SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presenter %28GUI%29\Settings Types\ERPCommunicator.resx">
+      <DependentUpon>ERPCommunicator.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="private.snk" />
+    <Compile Include="Presenter %28GUI%29\Settings Types\CRMCommunicator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presenter %28GUI%29\Settings Types\CRMCommunicator.Designer.cs">
+      <DependentUpon>CRMCommunicator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presenter %28GUI%29\Settings Types\ERPCommunicationComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presenter %28GUI%29\Settings Types\ERPCommunicationComponent.Designer.cs">
+      <DependentUpon>ERPCommunicationComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presenter %28GUI%29\SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presenter %28GUI%29\SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presenter %28GUI%29\Settings Types\ERPCommunicator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presenter %28GUI%29\Settings Types\ERPCommunicator.Designer.cs">
+      <DependentUpon>ERPCommunicator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application Logic\SettingsManager.cs" />
+    <Compile Include="Validation rules\ValidationRule.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Framework\UserControls\MultiPanel\InfoItem.resx">
+      <DependentUpon>InfoItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Framework\UserControls\MultiPanel\Properties\Resources.resx" />
+    <EmbeddedResource Include="Framework\UserControls\MultiPanel\SubItemsPanel.resx">
+      <DependentUpon>SubItemsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presenter %28GUI%29\Additional Dialogs\EditECCServiceDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EditECCServiceDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presenter %28GUI%29\Additional Dialogs\RemoveEndPointFromECCServiceDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RemoveEndPointFromECCServiceDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presenter %28GUI%29\Settings Types\ServiceType.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ServiceType.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CRMCommunicator.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ERPCommunicationComponent.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Service.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ERPCommunicator.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settingslist.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Sql.Server.Express.10.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2008 Express</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DatabaseCenter\Config.Dal\ConfigDatabase.Dal.csproj">
+      <Project>{03F8251A-7BD3-49E6-B08F-1F2C130E3421}</Project>
+      <Name>ConfigDatabase.Dal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DatabaseCenter\ConfigDatabase.Bussines\ConfigDatabase.Bussines.csproj">
+      <Project>{F29BAE24-13A5-450E-B5B5-23F2BC0B95BD}</Project>
+      <Name>ConfigDatabase.Bussines</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="README.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,4 @@
+DBRefFolders found in your dbp file
+Connect String: Data Source=.\SQLEXPRESS;Integrated Security=SSPI;AttachDbFilename=|DataDirectory|\ConfigDB.MDF;
+Provider: Microsoft SQL Server
+
